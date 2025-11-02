@@ -1,0 +1,14 @@
+{
+  "name": "smart-cart-payment",
+  "version": "1.0.0",
+  "description": "Smart Cart System with Razorpay Integration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "razorpay": "^2.9.2",
+    "uuid": "^9.0.0"
+  }
+}
