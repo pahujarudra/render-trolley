@@ -1,3 +1,5 @@
+const cors = require('cors');
+
 const express = require('express');
 const Razorpay = require('razorpay');
 const crypto = require('crypto');
@@ -6,6 +8,14 @@ const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 
 const app = express();
+
+// ✅ Allow requests from your Vercel frontend
+app.use(cors({
+  origin: ['https://smart-trolley-ten.vercel.app'], // your frontend URL
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type']
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
